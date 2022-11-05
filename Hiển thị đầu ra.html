@@ -4,15 +4,23 @@
     <title>Hiển thị đầu ra</title>
 </head>
 <body>
+<form style="font-family: sans-serif">
+<label>
+    <b>What you would like to buy?</b><BR>
+    <select id="Choose" onchange="myFunction()">
+        <option value="a">A</option>
+        <option value="b">B</option>
+        <option value="c">C</option>
+    </select>
+</label>
+    <p id="hihi" ></p>
+</form>
 <script>
     function myFunction() {
-        document.getElementById("demo").textContent= "xin chao"
-        alert("hello")
+        let x;
+        x=document.getElementById("Choose").value;
+        document.getElementById("hihi").innerHTML= x
     }
 </script>
-<p id="demo">haha</p>
-<button onclick="myFunction()">Nhấn vào đây</button>
-
-
 </body>
 </html>
