@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHUYEN DOI TIEN TE</title>
+</head>
+<body style="text-align: center">
+<h1>CHUYEN DOI TIEN TE</h1>
+<table>
+    <tr>
+        <td>AMOUNT</td>
+        <th>FROM CURRENCY</th>
+        <th>TO CURRENCY</th>
+        <th>
+            <button onclick="myFunction1()">
+                COVERT
+            </button>
+        </th>
+    </tr>
+    <tr>
+        <th><input type="number" id="amount"></th>
+        <th><select id="A" onchange="myFunction()">
+            <option> </option>
+            <option>VND</option>
+            <option>USD</option>
+            <option>JPY</option>
+        </select></th>
+        <th><select id="B" onchange="myFunction()">
+            <option> </option>
+            <option>VND</option>
+            <option>USD</option>
+            <option>JPY</option>
+        </select></th>
+        <th id="ketqua"></th>
+    </tr>
+</table>
+<script>
+    let c,a,b,d
+    const u = 24700, y = 166
+    function myFunction() {
+        d = document.getElementById("amount").value
+        a = document.getElementById("A").value
+        b = document.getElementById("B").value
+        if (a == 'VND'&&b == 'USD') {
+            c = d / u
+        } else if (b == 'VND'&&a == 'USD') {
+            c = d * u
+        } else if (b == 'JPY'&&a == 'VND') {
+            c = d / y
+        } else if (a == 'JPY'&&b == 'VND') {
+            c = d * y
+        } else if (a == 'USD'&&b == 'JPY') {
+            c = d * u / y
+        } else if (a == 'JPY'&&b == 'USD') {
+            c = d / u * y
+        }
+    }
+
+    function myFunction1() {
+        document.getElementById('ketqua').innerHTML = c
+    }
+</script>
+</body>
+</html>

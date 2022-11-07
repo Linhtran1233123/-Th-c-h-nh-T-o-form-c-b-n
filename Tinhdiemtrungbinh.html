@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh diem trung bin</title>
+  <b>NHAP DIEM TRUNG BINH</b>
+</head>
+<body>
+<p>Nhap diem mon Vat ly</p>
+<input id="vatly"><br>
+<p>Nhap diem mon Hoa</p>
+<input id="hoa"><br>
+<p>Nhap diem mon Sinh</p>
+<input id="sinh"><br>
+<button id="Diemtrungbinh" onclick="myFunction()">Xac nhan</button>
+<p> diem trung binh cua ban la </p>
+<p id="trungbinh"></p>
+<script>
+    function myFunction(){
+        let x,y,z,t
+        x=Number(document.getElementById('vatly').value)
+        y=Number(document.getElementById('hoa').value)
+        z=Number(document.getElementById('sinh').value)
+        t=x+y+z
+        document.getElementById('trungbinh').innerHTML=t/3
+    }
+</script>
+</body>
+</html>
