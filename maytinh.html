@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNG DUNG MAY TINH</title>
+</head>
+<body>
+<h1 style="text-align: center">CACULTOR</h1>
+<input type="number" id="tt1"><input type="number" id="tt2"><br>
+<button onclick="cong()">conghjfd</button>
+<button onclick="tru()">SUBTRACTION()</button>
+<button onclick="nhan()">MULTIPlICATION()</button>
+<button onclick="chia()">DIVISION()</button>
+<p>KET QUA LA</p><br>
+<p id="kq"></p>
+<script>
+  function cong() {
+     let a
+         a=Number(document.getElementById("tt1").value)+Number(document.getElementById('tt2').value)
+document.getElementById("kq").innerHTML=a
+  }
+  function tru() {
+     let b
+      b =Number(document.getElementById("tt1").value)-Number(document.getElementById('tt2').value)
+      document.getElementById("kq").innerHTML=b
+  }
+  function nhan() {
+     let c
+         c=Number(document.getElementById("tt1").value)*Number(document.getElementById('tt2').value)
+      document.getElementById("kq").innerHTML=c
+  }
+  function chia() {
+     let d
+         d =Number(document.getElementById("tt1").value)/Number(document.getElementById('tt2').value)
+      document.getElementById("kq").innerHTML=d
+  }
+</script>
+</body>
+</html>
