@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRA CUU GIA CA</title>
+</head>
+<body>
+<h2>TRA CUU GIA CA</h2>
+<select id="loai" onchange="price()">
+    <option></option>
+    <option>Táo</option>
+    <option>Cam</option>
+    <option>Xoài</option>
+</select>
+<button onclick="xacnhan()">XÁC NHẬN</button>
+<p id="demo"></p>
+<script>
+  let gia;
+  function price() {
+      switch (document.getElementById("loai").value) {
+          case "Táo":
+              gia = "23000";
+              break;
+          case "Cam":
+              gia = "16000";
+              break;
+          case "Xoài":
+              gia = "20000";
+      }
+  }
+  function xacnhan() {
+      document.getElementById("demo").innerHTML = document.getElementById("loai").value +" có giá là:"+ gia +"VND/KG";
+  }
+</script>
+
+</body>
+</html>

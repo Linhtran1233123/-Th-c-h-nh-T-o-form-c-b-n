@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>KIỂM TRA NĂM NHUẬN</title>
+</head>
+<body>
+     <h1>NHẬP NĂM CẦN KIỂM TRA :</h1><input type="number" id="nam">
+<button onclick="kiemtra()">XÁC NHẬN</button>
+<br><p>KẾT QUẢ LÀ:</p>
+<p id="ketqua"></p>
+<script>
+  function kiemtra() {
+    let a = document.getElementById("nam").value
+    let b
+    if (a ="") {
+      b = "nhập năm cần tìm"
+    }
+     else if ((a%4==0&&a%100!=0)||(a%400==0)) {
+       b = "năm nhuận"
+     } else {
+       b = "không phải năm nhuận"
+     }
+     document.getElementById("ketqua").innerHTML= b
+  }
+</script>
+</body>
+</html>

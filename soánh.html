@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sosanh</title>
+</head>
+<body>
+<p>NHAP GIA TRI</p>
+<input id="a" >
+<button onclick="sosanh()">xác nhận</button>
+<p>KET QUA</p>
+<p id="kq"></p>
+<script>
+  function sosanh() {
+    let v
+    let b = Number(document.getElementById("a").value) == 0
+    let c = Number(document.getElementById("a").value) > 0
+    switch (b) {
+      case true:
+        v = 0
+        break;
+      case false:
+        switch (c) {
+          case true:
+            v = 1
+            break;
+          case false:
+            v = -1
+            break;
+        }
+    }
+    document.getElementById("kq").innerHTML = v
+  }
+</script>
+</body>
+</html>
